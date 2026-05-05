@@ -1,0 +1,24 @@
+package com.strings;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Remove_Duplicate_HashSet {
+
+	public static void main(String[] args) {
+		String s = "sasi";
+		s=s.toLowerCase();
+		String result = "";
+		Set<Character> set = new HashSet<>();
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (!set.contains(ch)) {
+				set.add(ch);
+				result += ch;
+			}
+		}
+		System.out.println(result);
+
+	}
+
+}

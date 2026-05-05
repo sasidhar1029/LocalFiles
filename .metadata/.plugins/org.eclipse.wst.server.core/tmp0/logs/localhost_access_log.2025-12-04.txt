@@ -1,0 +1,7 @@
+127.0.0.1 - - [04/Dec/2025:15:43:34 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [04/Dec/2025:15:43:38 +0530] "GET /Registration/ HTTP/1.1" 200 3444
+0:0:0:0:0:0:0:1 - - [04/Dec/2025:15:43:38 +0530] "GET /Registration/images/management.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Dec/2025:15:43:38 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [04/Dec/2025:15:43:49 +0530] "GET /Registration/login.jsp HTTP/1.1" 200 3865
+0:0:0:0:0:0:0:1 - - [04/Dec/2025:15:43:51 +0530] "POST /Registration/LoginController HTTP/1.1" 200 1889
+0:0:0:0:0:0:0:1 - - [04/Dec/2025:15:43:59 +0530] "GET /Registration/course.jsp HTTP/1.1" 200 3553

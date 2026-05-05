@@ -1,0 +1,22 @@
+package com.javaintro;
+
+ public class Test_score {
+    void method(int num,int num1) {
+        
+        
+        int total = num + num2;
+        System.out.println("Total score: " + total);
+        
+        double div = num/num2;
+        System.out.println("average numer:" + div);
+        
+        long product = num*num2;
+        System.out.println("product of scores:" + product);
+        
+
+    public static void main(String[] args) {
+        Test_score p1 = new Test_score();
+        p1.method(200, 307);
+       
+    }
+}

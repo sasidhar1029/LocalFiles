@@ -1,0 +1,17 @@
+public class Convert {
+    public static void main(String[] args) {
+        // Original value in grams (double)
+        double grams = 1500;  // You can change this value
+
+        // 1. Convert grams to kilograms (1 kg = 1000 grams)
+        double kilograms = grams / 1000;
+
+        // 2. Convert grams to milligrams (1 gram = 1000 milligrams)
+        long milligrams = (long)(grams * 1000);
+
+        // Output
+        System.out.println("Original weight in grams: " + grams + " g");
+        System.out.println("Converted to kilograms (Double): " + kilograms + " kg");
+        System.out.println("Converted to milligrams (Long): " + milligrams + " mg");
+    }
+}

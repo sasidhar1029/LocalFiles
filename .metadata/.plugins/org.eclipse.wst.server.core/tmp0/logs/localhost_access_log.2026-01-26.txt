@@ -1,0 +1,5 @@
+127.0.0.1 - - [26/Jan/2026:19:01:45 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [26/Jan/2026:19:01:49 +0530] "GET /StudentsManagement/ HTTP/1.1" 200 1714
+0:0:0:0:0:0:0:1 - - [26/Jan/2026:19:01:49 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [26/Jan/2026:19:01:53 +0530] "POST /StudentsManagement/StudentController HTTP/1.1" 200 953
+0:0:0:0:0:0:0:1 - - [26/Jan/2026:19:01:54 +0530] "POST /StudentsManagement/loginController HTTP/1.1" 200 231

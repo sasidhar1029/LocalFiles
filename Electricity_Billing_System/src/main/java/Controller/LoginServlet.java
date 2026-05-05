@@ -1,0 +1,27 @@
+package Controller;
+
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
+import java.io.IOException;
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
+
+		if ("admin".equals(username) && "admin123".equals(password)) {
+
+			HttpSession session = req.getSession();
+			session.setAttribute("user", username);
+
+			resp.sendRedirect("dashboard.jsp");
+
+		} else {
+			resp.sendRedirect("login.jsp?error=1");
+		}
+	}
+}

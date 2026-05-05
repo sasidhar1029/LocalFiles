@@ -1,0 +1,14 @@
+package com.oops;
+
+public class Inheritance1 {
+
+	public static void main(String[] args) {
+		Inheritance1 i1 = new Inheritance1();
+		Inheritance1 i2 = new Inheritance1();
+		
+		System.out.println(i1);
+		
+		System.out.println(i1.clone());
+	}
+
+}

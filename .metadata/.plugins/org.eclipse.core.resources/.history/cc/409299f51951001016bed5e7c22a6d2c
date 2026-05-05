@@ -1,0 +1,12 @@
+package com.javaintro;
+public class Convert{
+	publc statc void main(String[] args) {
+		double grams = 1500;
+		double kilograms = grams/1000;
+		long milligrams = grams*1000;
+		
+		System.out.println(grams);
+		System.out.println(kilograms);
+		System.out.println(milligrams);
+	}
+}

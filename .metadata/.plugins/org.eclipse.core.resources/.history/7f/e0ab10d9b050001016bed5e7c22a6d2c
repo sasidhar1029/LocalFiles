@@ -1,0 +1,16 @@
+package com.javaintro;
+
+public class Test_score {
+	  int num = 200;
+	 int num1 = 390;
+	 int total;
+	public static void main(String[] args) {
+		
+		 Test_score t1 = new Test_score();
+		 t1.num = 200;
+		 t1.num1 = 380;
+		 t1.total = (t1.num + t1.num1);
+
+	}
+
+}

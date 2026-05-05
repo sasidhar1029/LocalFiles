@@ -1,0 +1,13 @@
+package com.javaintro;
+
+public class Test_score {
+	 static int num = 200;
+	 static int num1 = 390;
+	public static void main(String[] args) {
+		
+		System.out.println("the addition of two numbers:"+ (a+b));
+		System.out.println(num+" "+ num1);
+
+	}
+
+}

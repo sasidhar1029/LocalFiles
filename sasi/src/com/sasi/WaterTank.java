@@ -1,0 +1,50 @@
+package com.sasi;
+
+public class WaterTank {
+    // Variables
+    String ownerName;
+    double tankCapacity;
+    double currentWaterLevel;
+
+    // Constructor
+    WaterTank(String ownerName, double tankCapacity) {
+        this.ownerName = ownerName;
+        this.tankCapacity = tankCapacity;
+      
+    }
+
+    // Method to add water
+    void addWater(double liters) {
+        currentWaterLevel += liters; 
+        System.out.println("water:"+liters+"liters");
+    }
+
+    // Method to use water
+    void useWater(double liters) {
+       currentWaterLevel += liters;
+       System.out.println("water:"+liters+"liters");
+    }
+
+    // Method to show status
+    void showStatus() {
+        System.out.println("\n--- Tank Status ---");
+        System.out.println("Owner: " + ownerName);
+        System.out.println("Tank Capacity: " + tankCapacity + " liters");
+        System.out.println("Current Water Level: " + currentWaterLevel + " liters");
+        System.out.println("Remaining Capacity: " + (tankCapacity - currentWaterLevel) + " liters");
+        System.out.println("---------------------");
+    }
+
+    // main() method: JVM starts from here
+    public static void main(String[] args) {
+        System.out.println("=== Water Tank Management System ===");
+
+        // Create object
+        WaterTank tank1 = new WaterTank("Sasi", 1000.0);
+
+        // Perform actions (no loop)
+        tank1.addWater(100);
+        tank1.useWater(900);
+        tank1.showStatus();
+    }
+}

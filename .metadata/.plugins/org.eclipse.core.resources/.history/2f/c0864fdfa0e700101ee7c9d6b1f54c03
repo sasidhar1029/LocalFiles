@@ -1,0 +1,26 @@
+package com.basics;
+
+import java.util.Scanner;
+
+public class First_last_Element {
+
+	int findFirstDigit(int num) {
+		int n = num % 10;
+		return n;
+	}
+
+	int findLastDigit(int num) {
+		while (num >= 10) {
+			num /= 10;
+		}
+		return num;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int num = sc.nextInt();
+
+	}
+
+}

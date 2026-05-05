@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Customer</title>
+</head>
+<body>
+
+<h2>Add Customer</h2>
+
+<form action="addCustomer" method="post">
+
+Name:
+<input name="name" required><br><br>
+
+Meter No:
+<input name="meter" required><br><br>
+
+Address:
+<input name="address" required><br><br>
+
+Phone:
+<input name="phone" required><br><br>
+
+<button type="submit">Add Customer</button>
+
+</form>
+
+</body>
+</html>

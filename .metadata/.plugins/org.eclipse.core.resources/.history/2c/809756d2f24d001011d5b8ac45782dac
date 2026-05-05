@@ -1,0 +1,12 @@
+package com.javaintro;
+
+public class Ascii_value {
+
+	public static void main(String[] args) {
+		char ch = 'a';
+		int asciiValue = ch;
+		System.out.println("The ascii value of"+ " "ch " "+ "is"+asciiValue);
+
+	}
+
+}

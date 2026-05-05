@@ -1,0 +1,12 @@
+package com.stringPratice;
+
+public class C1 {
+
+	public static void main(String[] args) {
+		String s ="sasidharreddy";
+		 int s2 =s.length();
+		 System.out.println(s2);
+
+	}
+
+}

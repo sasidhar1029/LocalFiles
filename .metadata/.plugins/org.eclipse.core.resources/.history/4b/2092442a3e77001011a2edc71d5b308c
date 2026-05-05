@@ -1,0 +1,13 @@
+package com.dailyAssignments;
+
+import java.util.Scanner;
+
+public class Kaprekar_number {
+
+	public static void main(String[] args) {
+		 int a=45;
+		System.out.println(Math.sqrt(45));
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.dailyAssignments;
+
+import java.util.Scanner;
+
+public class Kaprekar_number {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter a number:");
+		int a =sc.nextInt();
+		int a1=(int) Math.pow(a, a);
+		System.out.println(a1);
+
+	}
+
+}

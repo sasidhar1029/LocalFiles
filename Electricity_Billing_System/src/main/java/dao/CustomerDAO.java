@@ -1,0 +1,113 @@
+package dao;
+
+import model.Customer;
+import java.sql.*;
+import java.util.*;
+
+public class CustomerDAO {
+
+    // ⭐ Add Customer
+	  public static boolean addCustomer(Customer c){
+
+	        try(Connection con = DBConnection.getConnection();
+	            PreparedStatement ps = con.prepareStatement(
+	            "insert into customer(name,meter_no,address,phone) values(?,?,?,?)")){
+
+	            ps.setString(1, c.getName());
+	            ps.setString(2, c.getMeterNo());
+	            ps.setString(3, c.getAddress());
+	            ps.setString(4, c.getPhone());
+
+	            return ps.executeUpdate() > 0;
+
+	        }catch(Exception e){
+	            e.printStackTrace();
+	        }
+
+	        return false;
+	    }
+
+    // ⭐ Get Customer by Meter
+    public static Customer getCustomerByMeter(String meter){
+        Customer c = null;
+
+        try(Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(
+            "select * from customer where meter_no=?")){
+
+            ps.setString(1, meter);
+            ResultSet rs = ps.executeQuery();
+
+            if(rs.next()){
+                c = new Customer();
+                c.setId(rs.getInt("id"));
+                c.setName(rs.getString("name"));
+                c.setMeterNo(rs.getString("meter_no"));
+                c.setAddress(rs.getString("address"));
+                c.setPhone(rs.getString("phone"));
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return c;
+    }
+
+    // ⭐ Get All Customers (VERY IMPORTANT ⭐)
+    public static List<Customer> getAllCustomers(){
+        List<Customer> list = new ArrayList<>();
+
+        try(Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement("select * from customer");
+            ResultSet rs = ps.executeQuery()){
+
+            while(rs.next()){
+                Customer c = new Customer();
+                c.setId(rs.getInt("id"));
+                c.setName(rs.getString("name"));
+                c.setMeterNo(rs.getString("meter_no"));
+                c.setAddress(rs.getString("address"));
+                c.setPhone(rs.getString("phone"));
+                list.add(c);
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    // ⭐ Update Customer
+    public static boolean updateCustomer(Customer c){
+        try(Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(
+            "update customer set name=?,address=?,phone=? where meter_no=?")){
+
+            ps.setString(1, c.getName());
+            ps.setString(2, c.getAddress());
+            ps.setString(3, c.getPhone());
+            ps.setString(4, c.getMeterNo());
+
+            return ps.executeUpdate() > 0;
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    // ⭐ Delete Customer
+    public static boolean deleteCustomer(String meter){
+        try(Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(
+            "delete from customer where meter_no=?")){
+
+            ps.setString(1, meter);
+            return ps.executeUpdate() > 0;
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+}

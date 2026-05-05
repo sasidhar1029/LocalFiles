@@ -1,0 +1,14 @@
+package com.dsa;
+
+public class Function {
+    void sum(int num1,int num2) {
+    	int result = num1+num2;
+    System.out.println("sum of "+num1+"& "+num2+" is : "+result);
+    }
+    	
+    
+	public static void main(String[] args) {
+	  Function f1 = new Function();
+	  f1.sum(212, 273);
+}
+}

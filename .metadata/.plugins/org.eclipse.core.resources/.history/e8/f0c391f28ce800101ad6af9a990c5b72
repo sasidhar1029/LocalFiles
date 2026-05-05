@@ -1,0 +1,10 @@
+package com.strings;
+
+public class Count_occurance_of_each_Char {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

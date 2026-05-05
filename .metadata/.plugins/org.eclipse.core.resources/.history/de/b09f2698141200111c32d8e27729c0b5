@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="generateBill" method="post">
+<input name="meter" placeholder="Meter No">
+<input name="units" placeholder="Units">
+<button>Generate</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+package com.stringPratice;
+
+public class C1 {
+
+	public static void main(String[] args) {
+		String s ="sasidhar reddy korrapolu";
+		System.out.println(s.length());
+
+	}
+
+}

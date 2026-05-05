@@ -1,0 +1,16 @@
+package com.oops;
+
+public class Inheritance1  implements Cloneable{
+
+	public static void main(String[] args) throws Throwable {
+		Inheritance1 i1 = new Inheritance1();
+		Inheritance1 i2 = new Inheritance1();
+		
+//		System.out.println(i1);
+		
+//		System.out.println(i1.clone());
+//		System.out.println(i1.getClass());
+		System.out.println(i1.hashCode());
+	}
+
+}

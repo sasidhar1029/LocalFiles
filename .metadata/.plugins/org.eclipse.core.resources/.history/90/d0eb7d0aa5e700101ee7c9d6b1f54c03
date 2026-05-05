@@ -1,0 +1,28 @@
+package com.basics;
+
+public class Power_of_number {
+	public static int reverse(int n) {
+		int rev = 0;
+		while (n > 0) {
+			int digit = n % 10;
+			rev = rev * 10 + digit;
+			n /= 10;
+		}
+		return rev;
+	}
+
+	public static int power(int a) {
+		int n = reverse(a);
+		int result = 1;
+		for (int i = 0; i < n; i++) {
+			result *= a;
+		}
+		return result;
+	}
+
+	public static void main(String[] args) {
+		int a = 10;
+		System.out.println(power(10));
+	}
+
+}

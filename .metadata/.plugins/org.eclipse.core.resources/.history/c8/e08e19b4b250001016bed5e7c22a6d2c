@@ -1,0 +1,12 @@
+package com.javaintro;
+
+public class Convert {
+      int grams;
+      
+	public static void main(String[] args) {
+		
+    Convert c1 = new Convert();
+    c1.grams = 2000;
+	}
+
+}

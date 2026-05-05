@@ -1,0 +1,32 @@
+package dao;
+import java.sql.*;
+import java.util.*;
+import model.Food;
+
+public class FoodDAO {
+
+    public static List<Food> getAllFoods() throws Exception {
+        List<Food> list = new ArrayList<>();
+        Connection con = DBUtil.getConnection();
+        PreparedStatement ps = con.prepareStatement("select * from food_items");
+        ResultSet rs = ps.executeQuery();
+
+        while(rs.next()) {
+            list.add(new Food(
+                rs.getInt(1),
+                rs.getString(2),
+                rs.getDouble(3)
+            ));
+        }
+        return list;
+    }
+
+    public static void addFood(String name, double price) throws Exception {
+        Connection con = DBUtil.getConnection();
+        PreparedStatement ps =
+            con.prepareStatement("insert into food_items(food_name,price) values(?,?)");
+        ps.setString(1, name);
+        ps.setDouble(2, price);
+        ps.executeUpdate();
+    }
+}

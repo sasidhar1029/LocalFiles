@@ -1,0 +1,10 @@
+@WebServlet("/payment")
+public class PaymentServlet extends HttpServlet{
+
+ protected void doPost(HttpServletRequest req,HttpServletResponse resp)
+ throws IOException,ServletException{
+
+     // Simple demo payment
+     resp.sendRedirect("dashboard.jsp");
+ }
+}

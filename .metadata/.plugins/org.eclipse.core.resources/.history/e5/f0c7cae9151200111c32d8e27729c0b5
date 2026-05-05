@@ -1,0 +1,22 @@
+package dao;
+import model.Customer;
+import java.sql.*;
+
+public class CustomerDAO {
+
+    public static boolean addCustomer(Customer c){
+        try{
+            Connection con=DBConnection.getConnection();
+            PreparedStatement ps=con.prepareStatement(
+                    "insert into customer(name,meter_no,address,phone) values(?,?,?,?)");
+
+            ps.setString(1,c.getName());
+            ps.setString(2,c.getMeterNo());
+            ps.setString(3,c.getAddress());
+            ps.setString(4,c.getPhone());
+
+            return ps.executeUpdate()>0;
+        }catch(Exception e){e.printStackTrace();}
+        return false;
+    }
+}

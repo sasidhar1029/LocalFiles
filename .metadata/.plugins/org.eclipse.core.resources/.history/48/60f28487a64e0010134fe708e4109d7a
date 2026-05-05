@@ -1,0 +1,20 @@
+package com.dsa;
+
+public class Function {
+//    void sum(int num1,int num2) {
+//    	int result = num1+num2;
+//    System.out.println("sum of "+num1+" & "+num2+" is : "+result);
+//    }
+//    	
+    
+	public static void main(String[] args) {
+//	  Function f1 = new Function();
+//	  f1.sum(212, 273);
+//	  f1.sum(21, 23);
+//	  f1.sum(342, 763);
+		Function f2 = new function()
+				f2.budget = "2000 crores";
+		          System.out.println(f2);
+		     
+	}
+}

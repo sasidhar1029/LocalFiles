@@ -1,0 +1,18 @@
+package Controller;
+
+@WebServlet("/addCustomer")
+public class AddCustomerServlet extends HttpServlet {
+
+ protected void doPost(HttpServletRequest req,HttpServletResponse resp)
+ throws IOException,ServletException{
+
+     Customer c=new Customer();
+     c.setName(req.getParameter("name"));
+     c.setMeterNo(req.getParameter("meter"));
+     c.setAddress(req.getParameter("address"));
+     c.setPhone(req.getParameter("phone"));
+
+     CustomerDAO.addCustomer(c);
+     resp.sendRedirect("dashboard.jsp");
+ }
+}

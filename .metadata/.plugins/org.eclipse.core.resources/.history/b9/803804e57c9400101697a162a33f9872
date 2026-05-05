@@ -1,0 +1,10 @@
+package com.dailyAssignments;
+
+public class Find_vowelsAndConsonents {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

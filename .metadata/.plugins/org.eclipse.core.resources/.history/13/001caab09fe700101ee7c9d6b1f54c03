@@ -1,0 +1,23 @@
+package com.basics;
+
+import java.util.Scanner;
+
+public class Even_or_odd {
+
+	void isEvenOrOdd(int a) {
+		int rem = a % 2;
+		if (rem == 0) {
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a nmmber");
+		int a = sc.nextInt();
+
+	}
+
+}

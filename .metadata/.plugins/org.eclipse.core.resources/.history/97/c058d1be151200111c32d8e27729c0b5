@@ -1,0 +1,29 @@
+package dao;
+import model.Bill;
+import java.sql.*;
+
+public class BillDAO {
+
+    public static double calculateAmount(int units){
+        if(units<=100) return units*5;
+        else if(units<=300) return units*7;
+        else return units*10;
+    }
+
+    public static boolean generateBill(Bill b){
+        try{
+            Connection con=DBConnection.getConnection();
+
+            PreparedStatement ps=con.prepareStatement(
+                    "insert into bill(meter_no,units,amount,status) values(?,?,?,?)");
+
+            ps.setString(1,b.getMeterNo());
+            ps.setInt(2,b.getUnits());
+            ps.setDouble(3,b.getAmount());
+            ps.setString(4,b.getStatus());
+
+            return ps.executeUpdate()>0;
+        }catch(Exception e){e.printStackTrace();}
+        return false;
+    }
+}

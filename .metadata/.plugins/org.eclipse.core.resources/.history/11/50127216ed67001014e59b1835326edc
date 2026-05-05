@@ -1,0 +1,113 @@
+//Credit Score
+//Monthly Income
+//Employment Years
+//Age
+//Marital Status
+//Number of Dependents
+//PAN Card Available
+//Aadhar Available
+//Existing Loans
+//EMI to Income Ratio
+//Criminal Record
+//CIBIL Report Status
+//Type of Job (Govt/Private/Other)
+//Property Ownership
+//Location (Urban/Rural)
+package com.sasi;
+
+import java.util.Scanner;
+
+public class S33 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("welcome to loan app");
+		System.out.println("enter credit score:");
+		int creditScore = sc.nextInt();
+		if (creditScore > 750) {
+			System.out.println("yearly income");
+			double salary = sc.nextDouble();
+			if (salary > 400000.00) {
+				System.out.println("EmployeementYears");
+				int experience = sc.nextInt();
+				if (experience > 2) {
+					System.out.println("Age");
+					int age = sc.nextInt();
+					if (age > 21) {
+						sc.nextLine();
+						System.out.println("marital status");
+						String maritalStatus = sc.nextLine();
+						if (maritalStatus.equals("yes")|| maritalStatus.equals("no")) {
+							System.out.println("Numbers of surity");
+							int surity = sc.nextInt();
+							if (surity >= 1) {
+								sc.nextLine();
+								System.out.println("pancard avaliable");
+								String pancard = sc.nextLine();
+								if (pancard.equals("yes")) {
+									sc.nextLine();
+									System.out.println("aadhar avaliable");
+									String aadharcard = sc.nextLine();
+									if (aadharcard.equals("yes")) {
+										sc.nextLine();
+										System.out.println("existing loans");
+										String existingLoan = sc.nextLine();
+										if (existingLoan.equals("no")) {
+											sc.nextLine();
+											System.out.println("criminal records");
+											String criminalRecords = sc.nextLine();
+											if (criminalRecords.equals("no")) {
+												sc.nextLine();
+												System.out.println("type of job:gov/pri/others");
+												String job = sc.nextLine();
+												if (job.equals("gov") || job.equals("pri") || job.equals("others")) {
+													sc.nextLine();
+													System.out.println("propertey ownership");
+													String pOwnerShip = sc.nextLine();
+													if (pOwnerShip.equals("its me")) {
+														sc.nextLine();
+														System.out.println("location (urban/rural)");
+														String loc = sc.nextLine();
+														if (loc.equals("urban") || loc.equals("rural")) {
+															System.out.println(
+																	"congrats your loan will approve take after 1 week");
+														}
+													} else {
+														System.out.println("sorry");
+													}
+
+												} else {
+													System.out.println("wont give you without job");
+												}
+											} else {
+												System.out.println("wont give if you hava criminal records");
+											}
+										} else {
+											System.out.println("we wont approve if you have already existing loan ");
+										}
+									} else {
+										System.out.println("without aadharcard we wont approve");
+									}
+								} else {
+									System.out.println("without pancard we wont approve");
+								}
+							} else {
+								System.out.println("must need atleast one member for surity");
+							}
+						} else {
+							System.out.println("your are maried so ..we wont");
+						}
+					} else {
+						System.out.println("your age is below 21 years");
+					}
+				} else {
+					System.out.println("your experience is less 2 years");
+				}
+			} else {
+				System.out.println("your salry is less than 400000");
+			}
+		} else {
+			System.out.println("your credit score is low");
+		}
+	}
+
+}

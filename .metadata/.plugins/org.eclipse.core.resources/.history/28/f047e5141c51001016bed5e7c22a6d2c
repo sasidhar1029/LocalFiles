@@ -1,0 +1,14 @@
+package com.javaintro;
+public class Pot{
+	
+	public static void main(String[] args) {
+		  static double grams = 1500;
+		System.out.println(grams);
+		
+		double kilograms = grams/1000;
+		System.out.println(kilograms);
+		
+		long milligrams = (long) grams*1000;
+		System.out.println(milligrams);
+	}
+}

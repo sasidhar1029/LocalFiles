@@ -1,0 +1,6 @@
+package Controller;
+
+@WebServlet("registration")
+public class RegistrationServelt {
+
+}

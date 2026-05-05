@@ -1,0 +1,14 @@
+package com.javaintro;
+
+public class Pot {
+      static double num1 = 200;
+      static double num2 = 390;
+	public static void main(String[] args) {
+		 
+		int avg =(int) (num1 + num2)/2;
+		System.out.println(avg);
+		
+
+	}
+
+}

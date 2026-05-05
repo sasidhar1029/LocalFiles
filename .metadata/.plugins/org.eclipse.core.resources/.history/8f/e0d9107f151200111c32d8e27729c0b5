@@ -1,0 +1,24 @@
+package Controller;
+
+@WebServlet("/generateBill")
+public class GenerateBillServlet extends HttpServlet{
+
+ protected void doPost(HttpServletRequest req,HttpServletResponse resp)
+ throws IOException,ServletException{
+
+     Bill b=new Bill();
+
+     b.setMeterNo(req.getParameter("meter"));
+     int units=Integer.parseInt(req.getParameter("units"));
+
+     double amount=BillDAO.calculateAmount(units);
+
+     b.setUnits(units);
+     b.setAmount(amount);
+     b.setStatus("UNPAID");
+
+     BillDAO.generateBill(b);
+
+     resp.sendRedirect("dashboard.jsp");
+ }
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Test7.java&apos; to &apos;sasi/src/com.StreamApi&apos;&#x0D;&#x0A;- Original project: &apos;sasi&apos;&#x0D;&#x0A;- Destination element: &apos;sasi/src/com.StreamApi&apos;&#x0D;&#x0A;- Original element: &apos;java8_features.Test7.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;com.StreamApi" element1="/src&lt;java8_features{Test7.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1764928762484" units="1" version="1.0"/>
+</session>

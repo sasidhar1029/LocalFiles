@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Customer</title>
+
+<style>
+body{font-family:Arial;margin:40px}
+input{display:block;margin:10px;padding:8px;width:250px}
+button{padding:8px 16px;background:#2196f3;color:#fff;border:none}
+</style>
+
+</head>
+<body>
+
+<h2>Add Customer</h2>
+
+<form action="addCustomer" method="post">
+
+<input name="name" placeholder="Name" required>
+<input name="meter" placeholder="Meter No" required>
+<input name="address" placeholder="Address" required>
+<input name="phone" placeholder="Phone" required>
+
+<button type="submit">Add Customer</button>
+
+</form>
+
+</body>
+</html>

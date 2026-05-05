@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Login</h2>
+
+<form action="login" method="post">
+<input name="username" placeholder="Username">
+<input name="password" type="password" placeholder="Password">
+<h2>Login Successful</h2>
+<a href="dashboard.jsp">Go Dashboard</a>
+<button>Login</button>
+<a href="Register.jsp">New User? Register Here</a>
+</form>
+
+<%
+if(request.getParameter("error")!=null){
+%>
+<p style="color:red">Invalid Login</p>
+<%
+}
+%>
+</body>
+</html>

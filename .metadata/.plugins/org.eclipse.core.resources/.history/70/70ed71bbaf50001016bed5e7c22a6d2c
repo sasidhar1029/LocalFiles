@@ -1,0 +1,16 @@
+package com.javaintro;
+
+public class Test_score {
+	 static int num = 380.56789;
+	static int num2 =100.45678;
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Total score:");
+		System.out.println( num + num2);
+		
+		System.out.println(num/num2);
+
+	}
+
+}

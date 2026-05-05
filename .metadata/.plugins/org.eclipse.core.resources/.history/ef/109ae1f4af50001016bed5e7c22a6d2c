@@ -1,0 +1,24 @@
+package com.javaintro;
+   
+int num = 200;
+int num2 = 390;
+ public class Test_score {
+    
+        
+        
+        
+        
+
+    public static void main(String[] args) {
+        
+        
+    	int total = num + num2;
+        System.out.println("Total score: " + total);
+        
+        double div = num/num2;
+        System.out.println("average numer:" + div);
+        
+        long product = num*num2;
+        System.out.println("product of scores:" + product);
+    }
+}

@@ -1,0 +1,30 @@
+package controller;   // recommended lowercase
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/registration")
+public class RegistrationServlet extends HttpServlet {
+
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+
+        String username = req.getParameter("username");
+        String mobile = req.getParameter("mobile");
+        String password = req.getParameter("password");
+        String repassword = req.getParameter("repassword");
+
+        // simple validation
+        if(password != null && password.equals(repassword)){
+            // TODO: save user in DB later
+            resp.sendRedirect("login.jsp");
+        }else{
+            resp.sendRedirect("registration.jsp?error=1");
+        }
+    }
+}
